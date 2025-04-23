@@ -1,7 +1,12 @@
 package principal;
 
+import java.util.List;
+
 import dao.ClientesDao;
+import dao.RegistroDao;
+import dao.VeiculoDao;
 import entidades.Clientes;
+import entidades.Veiculo;
 
 public class Principal {
 
@@ -12,8 +17,19 @@ public class Principal {
 		
 		daoCli.getConexao();
 		
+		RegistroDao daoRe = new RegistroDao();
+
+		daoRe.getConexao();
 		Clientes cliente = daoCli.pesquisarClientesPorCpf("12345678901");
 		System.out.println(cliente);
+		
+		VeiculoDao daoVei = new VeiculoDao();
+		List<Veiculo> lista = daoVei.listarVeiculo();
+		
+
+		for (Veiculo veiculo : lista) {
+			System.out.println(veiculo);
+		}
 		
 		
 		int horario = 1;
