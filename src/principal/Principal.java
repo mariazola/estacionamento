@@ -14,7 +14,19 @@ public class Principal {
 		
 		Clientes cliente = daoCli.pesquisarClientesPorCpf("12345678901");
 		System.out.println(cliente);
-
+		
+		
+		int horario = 1;
+		int resultado = horario/ 3;
+		
+		if (horario % 3 == 0) {
+			resultado = resultado;
+			
+		} else {
+			resultado = resultado + 1;
+		}
+		
+System.out.println(resultado);
 	}
 
 }
