@@ -13,6 +13,13 @@ public class Veiculo {
 	
 
 
+	public Veiculo(String placa) {
+		super();
+		this.placa = placa;
+	}
+
+
+
 	public Veiculo() {
 		super();
 	}
